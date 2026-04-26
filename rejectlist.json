@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "network": [
+        "udp"
+      ],
+      "port": [
+        3478,
+        5349
+      ]
+    },
+    {
+      "domain": [
+        // HTTPDNS-域名
+        "dns.jd.com",
+        "dns.weibo.cn",
+        "dns.weixin.qq.com",
+        "dns.weixin.qq.com.cn",
+        "httpdns-api.aliyuncs.com",
+        "httpdns-sc.aliyuncs.com",
+        "httpdns.alicdn.com",
+        "httpdns.bilivideo.com",
+        "httpdns.c.cdnhwc2.com",
+        "httpdns.calorietech.com",
+        "httpdns.meituan.com",
+        "httpdns.music.163.com",
+        "httpdns.n.netease.com",
+        "httpdns.push.oppomobile.com",
+        "httpdns.volcengineapi.com",
+        "httpdns.yunxindns.com",
+        "lofter.httpdns.c.163.com",
+        "music.httpdns.c.163.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        // HTTPDNS-域名
+        "httpdns.baidu.com",
+        "httpdns.baidubce.com",
+        "httpdns.pro",
+        "httpsdns.baidu.com",
+        // 哔哩哔哩-PCDN｜MCDN-域名
+        "mcdn.bilivideo.cn",
+        "mcdn.bilivideo.com",
+        "szbdyd.com",
+        // 虎牙-PCDN｜MCDN-域名
+        "pp.io",
+        "ppio.cloud",
+        "va.huya.com",
+        "statwup.huya.com",
+        // 注意：原配置在此处要求排除 bd.p2p.huya.com，请利用 Sing-box 匹配优先级在上方单独将其放行
+        "p2p.huya.com",
+        // 腾讯 (QQ / 腾讯视频 / QQ 音乐)
+        "stun.qqlive.qq.com",
+        "stun-a1.qq.com",
+        "signal.qvb.qcloud.com",
+        // 快手
+        "pcdn.yximgs.com",
+        "slb-p2p.vcloud.ks-live.com",
+        "yximgs-webrtc.liveplay.myqcloud.com",
+        "p2p-punch.xxpkg.com",
+        // 斗鱼
+        "bjfesdk.douyucdn.cn",
+        "dotcounter.douyucdn.cn",
+        "sdkapi.douyucdn.cn",
+        // 网易云音乐
+        "sd-gl.xinqiucc.com",
+        "ac.dun.163.com",
+        "fp-upload.dun.163.com",
+        // 芒果 TV / 搜狐 / 爱奇艺 / 喜马拉雅 / 优酷 等其他流媒体
+        "stun.hitv.com",
+        "p2p.tracker.tv.sohu.com",
+        "tpa-hcdn.iqiyi.com",
+        "pcdn.xmcdn.com",
+        // 通用 PCDN、星域云、金山云及第三方节点
+        "bsccdn.net",
+        "kuiniuca.com",
+        "onethingpcs.com",
+        "pkoplink.com",
+        "saxysec.com",
+        "uhabo.com",
+        "xycdn.com",
+        "gjfzpt.cn",
+        "jomodns.cn",
+        "stun.yfp2p.net",
+        "relay.webwormhole.io"
+      ]
+    },
+    {
+      "domain_regex": [
+        // 顶级 PCDN / STUN 规则
+        "(^|.*[.-])(stun[0-9-]*|turns?[0-9-]*|coturn)([.-].*|$)",
+        "(^|.*[.-])(p2p|pcdn|mcdn|webrtc|peer2peer|tracker|announce|dht)([.-].*|$)",
+        // 哔哩哔哩 (包含 AND 组合规则的正则化与 WILDCARD 转换)
+        "^cn.*\\.bilivideo\\.cn$",
+        "^cn.*\\.bilivideo\\.com$",
+        "^stun.*\\.chat\\.bilibili\\.com$",
+        "^.*-p2p-.*\\.chat\\.bilibili\\.com$",
+        ".*pcdn.*biliapi\\.net",
+        // 腾讯
+        "^stun.*\\.qvb\\.qcloud\\.com$",
+        ".*p2p.*qq\\.com",
+        // 快手 (WILDCARD 转换及原有正则)
+        "^config-p2p-.*\\.vcloud\\.ks-live\\.com$",
+        "^.*pcdn.*\\.xxpkg\\.com$",
+        "^p2p-punch-.*\\.xxpkg\\.com$",
+        "^(.+)-p2p-pull\\.(video|live)-voip\\.com$",
+        "^(.+)-p2p\\.pull\\.yximgs\\.com$",
+        "^(.+)-p2p-(.+)\\.pull\\.yximgs\\.com$",
+        // 斗鱼
+        "^stun.*\\.douyucdn\\.cn$",
+        "trk-([0-9\\-]+)\\.douyucdn\\.cn",
+        ".*p2p.*douyucdn\\.cn",
+        // 优酷等
+        ".*pcdn.*youku\\.com"
+      ]
+    }
+  ]
+}
