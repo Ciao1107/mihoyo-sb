@@ -2,9 +2,6 @@
   "version": 3,
   "rules": [
     {
-      "protocol": [
-        "stun"
-      ],
       "network": [
         "udp"
       ],
