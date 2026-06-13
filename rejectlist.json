@@ -2,19 +2,6 @@
   "version": 3,
   "rules": [
     {
-      "network": [
-        "udp"
-      ],
-      "port": [
-        3478,
-        3479,
-        5349,
-        19302,
-        19305,
-        19307
-      ]
-    },
-    {
       "domain": [
         // HTTPDNS-域名
         "dns.jd.com",
